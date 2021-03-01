@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[document]{ragged2e}
+\usepackage{amssymb}
+\begin{document}
+\section*{Tarea 1\\ Estadística 3 \\ERIKA REGINA ROBLES REYES\\ 1-Marzo-2021}
+\vspace{5mm}
+1) Sea     $Z_t$  un proceso, donde t es un número par, dónde $Z_t$ es una secuencia de variables aleatorias tales que:
+\medskip
+\begin{center}
+\medskip
+\\* $\hspace{40mm}$ 1 $\hspace{5mm}$ P[1]=1/2
+\medskip
+\\* $Z_t$ =
+\medskip
+ \\*$\hspace{40mm}$ -1$\hspace{5mm}$	 P[-1]=1/2
+\end{center}
+Si t es impar, $Z_t$ = $Z_{t-1}$
+\medskip
+\\*a) ¿El proceso es estacionario de orden 1?
+\\*b) ¿El proceso es estacionario de orden 2?
+\newline
+\bigskip
+\textbf{Solución}
+\newline
+\medskip
+\\a)
+\\$\bullet$ t es par
+\\$E [Z_t] = 1/2*(1)+1/2*(-1)=1/2 -1/2=0$
+ \\$Var[Z_t]$ =$ E[(Z_t -\bar{Z_t})^2] = E[Z_t ^2]= 1/2*(1)^2+1/2*(-1)^2=1/2 + 1/2$
+\\$Var[Z_t]$ = 1 $< \infty$
+\newline
+\medskip
+$\bullet$ t es impar $Z_t$ = $Z_{t-1}$
+\\$E [Z_{t-1}] = 1/2*(1)+1/2*(-1)=1/2 -1/2=0$
+ \\$Var[Z_{t-1}]$ =$ E[(Z_{t-1} -\bar{Z_{t-1}})^2] = E[Z_{t-1} ^2]= 1/2*(1)^2+1/2*(-1)^2=1/2 + 1/2$
+\\$Var[Z_t]$ = 1 $< \infty$
+\\ $\therefore$ El proceso es estacionario de orden 1
+\newline
+\medskip
+\\b)
+\\F($Z_t,Z_{t-1}$)=P[$Z_t < x,Z_{t-1} < x$]=P[$Z_t < x] = 1 - $F_x(x)
+\\ $\therefore$ El proceso es estacionario de orden 2
+\newline
+\vspace{5mm}
+2) Sea      \begin{ecuation} Z_t = U sen(\pi\)t) + V cos(2\pi\)t) \end{ecuation} dónde U y V son variables aleatorias con media 0 y varianza 1
+\medskip
+\\*a) ¿$Z_t$ es un proceso débilmente estacionario?
+\\*b) Calcular la función de autocovarianza $\gamma_h$
+\newline
+\bigskip
+\textbf{Solución}
+\newline
+\medskip
+\\a)
+\\$E [Z_{t}] = E[U sen(\pi\)t) + V cos(2\pi\)t)]=0$
+\\$Var[Z_t]=E[\bar{Z_t})^2]= E[(U sen(\pi\)t) + V cos(2\pi\)t))^2]\leq 2< \infty$
+\\ $\therefore$ El proceso es débilmente estacionario
+\medskip
+\\b)
+\\$\gamma_h$=$\gamma(t, t+h)$= $Cov(Z_t, Z_{t+h})$ = $Cov(U sen(\pi\)t) + V cos(2\pi\)t),U sen(\pi\)t+h) + V cos(2\pi\)t+h))=0
+\newline
+\vspace{5mm}
+3) Probar si los siguientes procesos son débilmente estacionarios:
+\medskip
+\\*a)  $Z_t=  A sen(2\pi\)t + \theta )$ , A es una constante, $\theta\sim U(0,\pi\))$
+\\*b) $Z_t=  A sen(2\pi\)t + \theta )$ , A es una variable aleatoria con media 0 y varianza 1 y $\theta$ es una constante
+\\*c) $Z_t= (-1)^t A$ , A es una variable aleatoria con media 0 y varianza 1
+\newline
+\bigskip
+\textbf{Solución}
+\newline
+\medskip
+\\a)$\[ \int_{0}^{\pi}  A sen(2\pi\)t + \theta ) \,\frac{1}{2\pi}d\theta \]$ =0
+\newline
+\vspace{5mm}
+4) Verificar las siguientes propiedades de la función de autocorrelación: 
+\medskip
+\\*a)  $\rho_0 =1$
+\\*b) $\mid \rho_k \mid \leq 1 $
+\\*c) $\rho_k$ = $\rho_{-k}$
+\newline
+\bigskip
+\textbf{Solución}
+\newline
+\medskip
+\\a) Tenemos que $\rho_k$=$\frac{\gamma_k}{\gamma_0}$
+\\sea k=0
+\\$\rho_0$=$\frac{\gamma_0}{\gamma_0}$
+\\$\therefore\rho_0 = 1$
+\\b) $\mid \rho_k \mid$ =$\frac{\mid\gamma_k\mid}{\mid\gamma_0\mid}\leq\frac{\gamma_0}{\gamma_0}$
+\\ $\therefore\mid \rho_k \mid \leq 1 $
+\\c) Tenemos que $\rho_k$=$\frac{\gamma_k}{\gamma_0}$
+\\Sea k=-k
+\\$\rho_{-k}$=$\frac{\gamma_{-k}}{\gamma_0}$
+\\Por la demostración anterior se cumple que $\rho_k$ = $\rho_{-k}$
+
+\newline
+\vspace{5mm}
+5) Dada la serie de tiempo
+\\*53,43,66,48,52,42,44,56,44,58,41,54,51,56,38,56,49,52,32,52,59,34,57,39,60,40,52,44,65,43 :
+\medskip
+\\*a) Graficar la serie
+\\*b) Calcular $\hat \rho_k $, k= 0, 1, 2, 3, 4, 5
+\\*c) Calcular la PACF $ \phi_{kk} $,k= 0, 1, 2, 3, 4, 5
+\newline
+\vspace{5mm}
+6) Encontrar la ACF $\rho_k$ y PACF  $ \phi_{kk} $,k= 0, 1, 2, 3, 4, 5; para los siguientes procesos:
+\medskip
+\\*a) $X_t$ = 0.5 $X_{t-1} + W_t$
+\\*b)  $X_t$ = 0.98 $X_{t-1} + W_t$
+\\*c)  $X_t$ = 1.3 $X_{t-1}$ - 0.4  $X_{t-2}+ W_t$
+\\*d)  $X_t$ = 1.2 $X_{t-1}$ - 0.8  $X_{t-2}+ W_t$
+\newline
+\vspace{5mm}
+7) Encontrar el rango de valores que puede tomar $\alpha$ tal que el proceso $X_t$ = $X_{t-1} + \alpha  X_{t-2} +  W_t$ sea estacionario
+\medskip
+\\Calcular la ACF cuando $\alpha$ = -1/2
+\newline
+\vspace{5mm}
+8) Considera el proceso $X_t$ = $W_{t} + 1.2 W_{t-1} + 0.5 W_{t-2}$ 
+\medskip
+\\*a) Encuentra la ACF $\rho_k$
+\\* b) Encuentra una expresión para la PACF $ \phi_{kk} $
+\newline
+\vspace{5mm}
+9) Considera el proceso $X_t$ = $W_{t} + 0.1 W_{t-1} + 0.21 W_{t-2}$ 
+\medskip
+\\*a) ¿El modelo es estacionario?
+\\* b) Encuentra $\rho_k$ y  $ \phi_{kk} $ para éste proceso
+\newline
+\vspace{5mm}
+10) De los siguientes modelos:
+\medskip
+\\*a) $X_t$ = 0.5 $X_{t-1} + W_t$
+\\*b)   $X_t$ = 0.25 $X_{t-1}$ - 0.3  $X_{t-2}+ W_t$
+\\*c) $X_t$ = 0.13 $X_{t-1} + W_t$
+\\*d)  $X_t$ = 0.23 $X_{t-1}$ + 0.3  $X_{t-2}+ W_t$
+\medskip
+\\*a) Simular 1000 observaciones
+\\* b) Calcular $\rho_k$ y  $ \phi_{kk} $ de forma analítica para k = 0, 1, 2, ..., 10
+\\* c) Estimar $\rho_k$ y  $ \phi_{kk} $   a partir de las 1000 simulaciones con $\hat\rho_k$  y  $ \hat{\phi_{kk}} $ , k = 0, 1, 2, ..., 10
+\end{document}
+
