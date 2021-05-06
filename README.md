@@ -1,3 +1,3 @@
 # Estadistica 3
-# Profesor. Claudio Cuevas
-# Universidad Marista
+### Profesor. Claudio Cuevas
+#### Universidad Marista
